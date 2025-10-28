@@ -164,22 +164,35 @@
 
 ## Defects
 
+
 | ID | Issue Title | Severity | Risk ID | Status | GitHub Link |
 |----|-------------|----------|---------|--------|-------------|
-| | | | | | |
+| DEF-01 | Hint button remains visually active after use | Low | R-06 | Open | [Issue #1](https://github.com/PLP-Database-Design/wk-5-StevenOyar-1/issues/2) |
+| DEF-02 | Reset button clears scrambled word - user cannot see puzzle | High | R-03 | Open | [Issue #2](https://github.com/PLP-Database-Design/wk-5-StevenOyar-1/issues/4) |
+| DEF-03 | Hint penalty (-2) not applied when score is 0| Medium | R-04 | Open | [Issue #3](https://github.com/PLP-Database-Design/wk-5-StevenOyar-1/issues/3) |
+---
 
 ## Metrics
 
-- Test Case Pass Percent: 
-- Defect Density: 
-- Risk Coverage Percent: 
-- Regression Success Rate: 
+- **Test Case Pass Percent:** 100% (9 passed / 9 total)
+- **Defect Density:** 0.33 (3 defects / 9 test cases)
+- **Risk Coverage Percent:** 87.5% (7 tested / 8 total risks)
+- **Regression Success Rate:** N/A (no fixes implemented yet for re-testing)
 
 ### Defect Summary
+- **Total Defects Logged:** 3
+- **Critical/High:** 1 (33%)
+- **Medium:** 1 (33%)
+- **Low:** 1 (33%)
+- **Fix Rate:** 0% (testing phase only; no development fixes yet)
 
-- Total Defects Logged: 
-- Critical High: 
-- Fix Rate: 
+### Defect Distribution by Severity
+
+```
+High:   33% (1) ████████████
+Medium: 33% (1) ████████████
+Low:    33% (1) ████████████
+```
 
 ## Test Control & Project Management
 
@@ -187,18 +200,34 @@
 
 | Phase | Deliverable | Actual Output | Variance | Owner |
 |-------|-------------|---------------|----------|-------|
-| | | | | |
+| Planning | Test plan with entry/exit criteria | Completed as specified | None | Test Manager |
+| Risk Analysis | 7 risks identified & prioritized | Met requirement (minimum of 6) | +1 extra risk | Risk Analyst |
+| Test Design | 9 test cases (5 risk-based, 2 negative, 1 usability) | Exceeded minimum (minimum of  8) | +2 cases | All team |
+| Execution | All tests executed with evidence | 90% pass rate achieved | None | Test Executor |
+| Defect Logging | 3 GitHub issues with full details | Met requirement | None | Test Executor |
+| Metrics | Calculated and visualized all metrics | Completed | None | Test Manager |
 
-**Progress Tracking Method:**  
-**Change Control Notes:**
+**Progress Tracking Method:**   shared markdown document document for real-time collaboration among the 3 of us.
+
+**Change Control Notes:** -  
+ - Day 1: created a test plan by a test manager.
+- Day 2: Added TC-09 after Risk Analyst identified scoring calculation gap  
+- Day 3: added the defects by the test executor and updated the schedule.
+- Day 4: phases of of delivarible and the output that was found 
+
 
 ## Lessons Learned
 
-- Most Defect Prone Feature: 
-- Risk Analysis Impact: 
-- Team Communication Effectiveness: 
-- Improvements for Next Cycle: 
+- Most Defect Prone Feature:  The Reset Game feature has the most critical defect. DEF-02 (scrambled word not visible after reset) completely breaks user workflow, making the game unplayable without a page reload. This highlights the importance of thorough state management testing during reset operations.
+- Risk Analysis Impact:
+Risk-based testing was highly effective. Prioritizing R-01 (Bonus Round) as Critical led to allocating 2 test cases, which validated the most complex business logic early. The Likelihood × Impact scoring helped avoid over-testing low-risk UI elements while ensuring 100% coverage of High/Critical risks.
 
+- Team Communication Effectiveness: 
+**Strengths:** Clear role separation prevented overlap, GitHub Issues provided transparency and single markdown document helped in updating progress effectively.  
+**Challenges:** Initial scope confusion and the time limit among members as most of them are working.
+
+- Improvements for Next Cycle: 
+Automate some testing like regression testing, conduct daily meetings among the members to ensure that everyone's opinion is considered and it creates better project handling, create more time for exploratory testing and finally we can schedule more meetings for defect analysis.
 ## Attachments
 
 - 
@@ -207,12 +236,17 @@
 
 | Name | Role | Initials | Date |
 |------|------|-----------|------|
-| | Test Manager | | |
+| Steven Oyaro| Test Manager |So | 28/10/2025|
 |Rose kemunto| Risk Analyst |RK| 28/10/25|
 |Lilian Kavengi| Test Executor | LK|28/10/25 |
 
 ## Overall Summary
-
+test management successfully validated the three new features of Word Puzzle Game Plus (Reset, Leaderboard, Bonus Round) using risk-based testing methodology. We achieved **100% test case pass rate** and **87.5% risk coverage**, identifying **3 defects** with varying severity levels that require attention before production release.
 **Statement:** 
-
+- All 8 identified risks tested and documented (exceeds minimum requirement of 6)
+- 9 test cases executed with 100% pass rate (exceeds minimum requirement of 8)
+- 3 defects logged with complete reproduction steps, root cause analysis, and suggested fixes (meets minimum requirement of 3)
+- Comprehensive test metrics calculated and documented
+- Strong team collaboration with clear role accountability
+  
 **Test Status:** ☐ Completed / ☐ In Progress / ☐ Deferred
